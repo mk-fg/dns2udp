@@ -26,3 +26,19 @@ Ncat: Connected to 127.0.0.1:1235.
 ```
 
 Needs Python 2.7 and [Twisted](http://twistedmatrix.com/).
+
+More a proof of concept than a real thing, for which some extra things might be
+useful:
+
+ - Smarter name encoding.
+
+ - Length restriction on names and replies, splitting and re-assembling of
+   packets on both sides.
+
+ - Polling (quite frequent) to get packets buffered on dns side.
+
+ - Working with some fixed or maybe endpoint-dependent
+   (e.g. "<addr/port>.my.proxy.domain.tld" for packets to/from "addr/port")
+   domain name suffix.
+
+ - Probably not that great for lots of traffic anyway.
